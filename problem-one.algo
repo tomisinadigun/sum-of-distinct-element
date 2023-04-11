@@ -1,0 +1,22 @@
+ALGORITHM sum-distinct-elements
+VAR
+    tab1: ARRAY_OF_INTEGERS[5]
+    tab2: ARRAY_OF_INTEGERS[5]
+    i, j, sum: INTEGER;
+BEGIN
+    FOR i FROM 0 TO 4 STEP 1  DO
+        Read(tab1[i]);
+        Read(tab2[i]);
+    END_FOR
+
+    sum:= 0;
+    j:= 0;
+    WHILE (j < 5) DO
+        IF (tab1[i] <> tab2[i]) THEN
+            sum:= sum + i;
+            j:= j + 1;
+        END_IF
+    END_WHILE
+    
+    Write("The sum of distinct numbers = " sum)
+END
